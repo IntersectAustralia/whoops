@@ -14,3 +14,4 @@ doc/assets
 doc/site/tmp
 doc/site/output
 doc/site/crash.log
+.idea/*

@@ -1,4 +1,18 @@
-@import "bootstrap.scss";
+// CSS Reset
+@import "reset.scss";
+
+// Core
+@import "variables.scss";
+@import "mixins.scss";
+
+// Grid system and page structure
+@import "scaffolding.scss";
+
+// Styled patterns and elements
+@import "type.scss";
+@import "forms.scss";
+@import "tables.scss";
+@import "patterns.scss";
 
 body {
   padding-top:60px;
