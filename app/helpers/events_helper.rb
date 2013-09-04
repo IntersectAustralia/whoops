@@ -1,9 +1,10 @@
 module EventsHelper
   def format_detail(detail)
     case detail
-    when String, Numeric then detail
-    when Array           then "<ul class='array'>#{detail.collect{|d| "<li>- #{format_detail(d)}</li>" }.join}</ul>".html_safe
-    when Hash            then detail_table(detail)
+    when String   then escape_javascript(detail)
+    when Numeric  then detail
+    when Array    then "<ul class='array'>#{detail.collect{|d| "<li>- #{format_detail(d)}</li>" }.join}</ul>".html_safe
+    when Hash     then detail_table(detail)
     else
       escape_javascript(detail.to_s.html_safe)
     end
